@@ -1,0 +1,14 @@
+<html>
+<head> 
+    <meta charset="utf-8" />
+    <title>1A2B小遊戲</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/1A2B.js"></script> 
+    <h1>1A2B小遊戲</h1>
+    <input type="text" id="answer" name="answer"  autocomplete="off" maxlength="4" oninput = "value=value.replace(/[^\d]/g,'')"> 
+    <input type="button" value="送出" id="submit">
+   
+    <div style="margin-top: 10px;" id="msg"></div>
+</body>
