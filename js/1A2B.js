@@ -3,10 +3,14 @@ $(document).ready(function ()
     $('#submit').click(function (){
         if(check()){
             $.ajax({
-                url: 'http://localhost:8081/game',
+                url: 'http://127.0.0.1:8085/game',
                 cache: false,
                 dataType: 'html',
                 type:'GET',
+                xhrFields: {
+                    withCredentials: true
+                },
+                crossDomain:true,       //允許跨域
                 data: { answer: $('#answer').val()},
                 error: function(xhr) {
                 alert('Ajax request 發生錯誤');
